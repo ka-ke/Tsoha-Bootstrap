@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="page-header">
+    <h1>Hae korttia tietokannasta</h1>
+  </div>
+
+<input type="text" name="cardname">Nimi<br>
+<input type="text" name="cardset">Setti<br>
+<br>
+
+<input type="radio" name="cardtype" value="creature">Creature<br>
+<input type="radio" name="cardtype" value="land">Land<br>
+<input type="radio" name="cardtype" value="instant">Instant<br>
+<input type="radio" name="cardtype" value="sorcery">Sorcery<br>
+<input type="radio" name="cardtype" value="artifact">Artifact<br>
+<input type="radio" name="cardtype" value="enchantment">Enchantment<br>
+<input type="radio" name="cardtype" value="planeswalker">Planeswalker<br>
+<input type="radio" name="cardtype" value="tribal">Tribal<br>
+<br>
+
+<input type="radio" name="rarity" value="mythic">Mythic Rare<br>
+<input type="radio" name="rarity" value="rare">Rare<br>
+<input type="radio" name="rarity" value="uncommon">Uncommon<br>
+<input type="radio" name="rarity" value="common">Common<br>
+<input type="radio" name="rarity" value="timeshift">Timeshifted<br>
+<br>
+
+<input type="text" name="cmc">CMC<br>
+
+W<input type="checkbox" name="color" value="white">
+U<input type="checkbox" name="color" value="blue">
+B<input type="checkbox" name="color" value="black">
+R<input type="checkbox" name="color" value="red">
+G<input type="checkbox" name="color" value="green"><br>
+
+
+
+
+
+
+{% endblock %}
