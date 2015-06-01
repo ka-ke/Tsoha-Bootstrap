@@ -7,19 +7,19 @@ CREATE TABLE Account(
 
 CREATE TABLE Collection(
     ID SERIAL PRIMARY KEY,
-    collector varchar(20) NOT NULL,
+    collector varchar(20) NOT NULL
 );
 
 CREATE TABLE CollectionEntry(
     ID SERIAL PRIMARY KEY,
     added DATE,
-    collectorID INTEGER REFERENCES Collection(ID),
+--     collectorID INTEGER REFERENCES Collection(ID),
     cardname varchar(20) NOT NULL,
     expansion varchar(20) NOT NULL,
     foil boolean DEFAULT FALSE,
     cardCondition varchar(20) NOT NULL,
     amount INTEGER NOT NULL,
-    location varchar(20)
+    location varchar(20) NOT NULL
 );
 
 CREATE TABLE ValueProgress(
@@ -39,9 +39,10 @@ CREATE TABLE Deck(
 
 CREATE TABLE DeckEntry(
     ID SERIAL PRIMARY KEY,
+    deckName INTEGER REFERENCES Deck(ID),
     cardname varchar(20) NOT NULL,
     expansion varchar(20) NOT NULL,
     foil boolean DEFAULT FALSE,
     amount INTEGER NOT NULL,
     mainboard boolean DEFAULT TRUE
-),
+);
